@@ -37,7 +37,7 @@ const moreAvengers = {
     ironMan: `Tony Stark`
 };
 // 4e
-const {nat, ...others} = moreAvengers;
+const {blackWidow: nat, ...others} = moreAvengers;
 // 4f
 console.log(moreAvengers);
 
@@ -49,8 +49,20 @@ const bonus = {
     third: [7, 8, 9]
   };
 // 5a
-const {...bonus} = all;  
+const all = [
+    ...bonus.first,
+    ...bonus.second,
+    ...bonus.third
+];  
 console.log(all);
+
+// 5b
+const {first, second, third} = bonus;
+const [one, two, three] = first;
+const [four, five, six] = second;
+const [seven, eight, nine] = third;
+console.log(one, two, three, four, five, six, seven, eight, nine);
+
 
 
 
